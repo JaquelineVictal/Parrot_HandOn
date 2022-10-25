@@ -1,0 +1,54 @@
+-- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
+--
+-- Host: localhost    Database: parrot
+-- ------------------------------------------------------
+-- Server version	8.0.30
+
+
+USE parrot;
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `user`
+--
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `parrot`.`user` (
+  `iduser` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(70) NOT NULL,
+  `email` VARCHAR(70) NOT NULL,
+  `apartament` INT NOT NULL,
+  `password` VARCHAR(120) NOT NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `delete_at` TIMESTAMP,
+  PRIMARY KEY (`iduser`));
+  
+  DROP TABLE IF EXISTS `post`;
+  CREATE TABLE `parrot`.`post` (
+  `idpost` INT NOT NULL AUTO_INCREMENT,
+  `content` TEXT(300) NOT NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `delete_at` TIMESTAMP,
+  `iduser` INT NOT NULL,
+  PRIMARY KEY (`idpost`),
+  INDEX `IdUser_FK_idx` (`iduser` ASC) VISIBLE,
+  CONSTRAINT `IdUser_FK`
+    FOREIGN KEY (`iduser`)
+    REFERENCES `parrot`.`user` (`iduser`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+
+  
+  
