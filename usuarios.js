@@ -1,6 +1,6 @@
-const usuarios = require("../models/psicologos");
+const usuarios = require("../models/usuarios");
 const bcrypt = require('bcryptjs');
-const usuario = require("../models/psicologos");
+const usuario = require("../models/usuarios");
 
 
 const usuarios = {
