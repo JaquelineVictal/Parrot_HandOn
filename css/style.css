@@ -1,0 +1,84 @@
+body {
+  background-image: url(../assets/BACKGROUND.png);
+  background-size: cover;
+  font-family: "Questrial";
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  margin: 15% 30%;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.card img {
+  max-width: 30%;
+  margin: 72px 156px 0 160px;
+}
+
+.input {
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 335px;
+  background-color: #ffffff;
+  border: 1px solid;
+  margin-bottom: 26px;
+  height: 39px;
+  border-color: #555555;
+  background-color: #ffffff;
+}
+
+.btn {
+  background-color: #76bb4c;
+  border-color: #76bb4c;
+  border-radius: 5px;
+  width: 335px;
+  height: 39px;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 15rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: black;
+  color: #76bb4c;
+  transition: 1.5s;
+  transform: matrix3d(1, 1, 1, 50deg);
+}
+
+::placeholder {
+  text-align: center;
+  font-family: "Questrial";
+  font-size: 24px;
+  font-weight: 400;
+}
+
+@media(min-width:310px) and (max-width:1024px) {
+  body{
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 350px;
+    margin: 10% 5% 10% 5%;
+  }
+
+  .card img{
+    margin-left: 120px;
+    width: 600px;
+  }
+
+  .input {
+    width: 250px;
+  }
+
+  .btn {
+    width: 250px;
+  }
+
+}
