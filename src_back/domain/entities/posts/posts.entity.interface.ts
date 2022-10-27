@@ -1,6 +1,6 @@
 export interface IPostEntity{
     idpost?: number,
-    content:string,
+    content?:string,
     createdAt?:Date,
     updatedAt?:Date
     deletedAt?:Date

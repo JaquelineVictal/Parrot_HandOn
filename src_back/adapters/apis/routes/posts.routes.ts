@@ -12,7 +12,7 @@ export class PostsRoutes extends CommonRoutesConfig{
 
         this.app.route(`/posts`)
         .get(//auth,
-        usersMiddlewares.compareSync,
+            usersMiddlewares.compareSync,
             postsControllers.listPosts,
         ) // listar posts
         .post(
@@ -36,11 +36,11 @@ export class PostsRoutes extends CommonRoutesConfig{
             postsControllers.getPostsById
                 )
 
-        this.app.route(`/posts/:iduser`)
-        .post(
-            usersMiddlewares.compareSync,
-            postsControllers.createPost,
-                )
+      //  this.app.route(`/posts/:iduser`)
+       // .post(
+         //   usersMiddlewares.compareSync,
+         //   postsControllers.createPost,
+            //    )
         return this.app
     }
 }

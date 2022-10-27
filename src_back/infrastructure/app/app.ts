@@ -42,7 +42,7 @@ if(!process.env.DEBUG) {
 app.use(expressWinston.logger(loggerOptions));
 
 routes.push(new UserRoutes(app));
-routes.push(new PostsRoutes(app))
+routes.push(new PostsRoutes(app));
 
 let runningMessage = `Servidor rodando na porta ${PORT}`;
 
