@@ -6,6 +6,8 @@ justify-content:space-between;
 align-items:center;
 border-bottom-style:hidden;
 box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
+background: #FFFFFF;
+margin-top: 20px;
 
 
 .sair{

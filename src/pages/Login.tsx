@@ -2,6 +2,7 @@ import { Deslogado } from "../components/Body/Body"
 import Forms from '../components/Forms/Forms';
 import Input from "../components/Input/index"
 import { Button } from "../components/Button/Button"
+import NavBar from "../components/NavBar/NavBar";
 
 export default function Login() {
   return (

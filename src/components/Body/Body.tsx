@@ -1,7 +1,8 @@
 import { BodyLogado, BodyDeslogado } from "./Body.style"
+import { ReactNode } from "react";
 
 type LogadoProps = {
-  children: JSX.Element;
+  children: ReactNode;
 }
 
 interface DeslogadoProps extends LogadoProps{
