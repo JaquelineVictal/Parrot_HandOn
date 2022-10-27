@@ -12,17 +12,9 @@
 }
 
 .btn:hover {
-  background-color: black;
-  color: #76bb4c;
-  transition: 1.5s;
-  transform: matrix3d(1, 1, 1, 50deg);
 }
 
 ::placeholder {
-  text-align: center;
-  font-family: "Questrial";
-  font-size: 24px;
-  font-weight: 400;
 }
 
 .cadastre-se {
