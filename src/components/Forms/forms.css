@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
-.card {
-}
-
-.input {
-  border-radius: 7px;
-  box-sizing: border-box;
-  border: 1px solid;
-  height: 2.2rem;
-  border-color: #909090;
-}
 
 .btn {
   background-color: #76bb4c;
