@@ -6,7 +6,8 @@ import { IUseCase } from "../usecase.interface";
 class updateUserUsecase implements IUseCase{
     constructor(private _repository: IUsersRepository){}
     async execute(data: IUsersEntity): Promise<IUsersEntity | undefined> {
-         return await this._repository.updateById(data)        
+         console.log(data)  
+         return await this._repository.updateById(data)               
     }
 }
 

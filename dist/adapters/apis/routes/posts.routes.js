@@ -17,14 +17,17 @@ class PostsRoutes extends common_routes_config_1.CommonRoutesConfig {
         users_middlewares_1.default.compareSync, posts_controllers_1.default.listPosts) // listar posts
             .post(users_middlewares_1.default.compareSync, posts_controllers_1.default.createPost);
         this.app.route(`/posts/:idpost`)
-            .all(users_middlewares_1.default.compareSync, posts_controllers_1.default.listPosts) //valida se conta existe ou não
-            .put(users_middlewares_1.default.compareSync, posts_controllers_1.default.updatePosts) //atualizar usuário
-            .delete(users_middlewares_1.default.compareSync, posts_controllers_1.default.deletePosts) //deletar usuário
-            .get(users_middlewares_1.default.compareSync, posts_controllers_1.default.getPostsById); //pegar conta por id
-        this.app.route(`/posts/:iduser`)
-            .post(users_middlewares_1.default.compareSync, posts_controllers_1.default.createPost);
+            .all(users_middlewares_1.default.compareSync, posts_controllers_1.default.listPosts)
+            .put(users_middlewares_1.default.compareSync, posts_controllers_1.default.updatePosts)
+            .delete(users_middlewares_1.default.compareSync, posts_controllers_1.default.deletePosts)
+            .get(users_middlewares_1.default.compareSync, posts_controllers_1.default.getPostsById);
+        //  this.app.route(`/posts/:iduser`)
+        // .post(
+        //   usersMiddlewares.compareSync,
+        //   postsControllers.createPost,
+        //    )
         return this.app;
     }
 }
 exports.PostsRoutes = PostsRoutes;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicG9zdHMucm91dGVzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vc3JjX2JhY2svYWRhcHRlcnMvYXBpcy9yb3V0ZXMvcG9zdHMucm91dGVzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7OztBQUNBLHlGQUFnRTtBQUNoRSx5RkFBZ0U7QUFDaEUsaUVBQTREO0FBRTVELE1BQWEsV0FBWSxTQUFRLHlDQUFrQjtJQUMvQyxZQUFZLEdBQXdCO1FBQ2hDLEtBQUssQ0FBQyxHQUFHLEVBQUUsYUFBYSxDQUFDLENBQUM7SUFDOUIsQ0FBQztJQUVELGVBQWU7UUFFWCxJQUFJLENBQUMsR0FBRyxDQUFDLEtBQUssQ0FBQyxRQUFRLENBQUM7YUFDdkIsR0FBRyxDQUFDLE9BQU87UUFDWiwyQkFBZ0IsQ0FBQyxXQUFXLEVBQ3hCLDJCQUFnQixDQUFDLFNBQVMsQ0FDN0IsQ0FBQyxlQUFlO2FBQ2hCLElBQUksQ0FDRCwyQkFBZ0IsQ0FBQyxXQUFXLEVBQzVCLDJCQUFnQixDQUFDLFVBQVUsQ0FDOUIsQ0FBQTtRQUdELElBQUksQ0FBQyxHQUFHLENBQUMsS0FBSyxDQUFDLGdCQUFnQixDQUFDO2FBQy9CLEdBQUcsQ0FDQSwyQkFBZ0IsQ0FBQyxXQUFXLEVBQzVCLDJCQUFnQixDQUFDLFNBQVMsQ0FBQyxDQUFBLCtCQUErQjthQUM3RCxHQUFHLENBQ0EsMkJBQWdCLENBQUMsV0FBVyxFQUM1QiwyQkFBZ0IsQ0FBQyxXQUFXLENBQUMsQ0FBQSxtQkFBbUI7YUFDbkQsTUFBTSxDQUNILDJCQUFnQixDQUFDLFdBQVcsRUFDNUIsMkJBQWdCLENBQUMsV0FBVyxDQUFDLENBQUEsaUJBQWlCO2FBQ2pELEdBQUcsQ0FDQSwyQkFBZ0IsQ0FBQyxXQUFXLEVBQzVCLDJCQUFnQixDQUFDLFlBQVksQ0FDeEIsQ0FBQSxDQUFBLG9CQUFvQjtRQUU3QixJQUFJLENBQUMsR0FBRyxDQUFDLEtBQUssQ0FBQyxnQkFBZ0IsQ0FBQzthQUMvQixJQUFJLENBQ0QsMkJBQWdCLENBQUMsV0FBVyxFQUM1QiwyQkFBZ0IsQ0FBQyxVQUFVLENBQ3RCLENBQUE7UUFDVCxPQUFPLElBQUksQ0FBQyxHQUFHLENBQUE7SUFDbkIsQ0FBQztDQUNKO0FBeENELGtDQXdDQyJ9
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicG9zdHMucm91dGVzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vc3JjX2JhY2svYWRhcHRlcnMvYXBpcy9yb3V0ZXMvcG9zdHMucm91dGVzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7OztBQUNBLHlGQUFnRTtBQUNoRSx5RkFBZ0U7QUFDaEUsaUVBQTREO0FBRTVELE1BQWEsV0FBWSxTQUFRLHlDQUFrQjtJQUMvQyxZQUFZLEdBQXdCO1FBQ2hDLEtBQUssQ0FBQyxHQUFHLEVBQUUsYUFBYSxDQUFDLENBQUM7SUFDOUIsQ0FBQztJQUVELGVBQWU7UUFFWCxJQUFJLENBQUMsR0FBRyxDQUFDLEtBQUssQ0FBQyxRQUFRLENBQUM7YUFDdkIsR0FBRyxDQUFDLE9BQU87UUFDUiwyQkFBZ0IsQ0FBQyxXQUFXLEVBQzVCLDJCQUFnQixDQUFDLFNBQVMsQ0FDN0IsQ0FBQyxlQUFlO2FBQ2hCLElBQUksQ0FDRCwyQkFBZ0IsQ0FBQyxXQUFXLEVBQzVCLDJCQUFnQixDQUFDLFVBQVUsQ0FDOUIsQ0FBQTtRQUdELElBQUksQ0FBQyxHQUFHLENBQUMsS0FBSyxDQUFDLGdCQUFnQixDQUFDO2FBQy9CLEdBQUcsQ0FDQSwyQkFBZ0IsQ0FBQyxXQUFXLEVBQzVCLDJCQUFnQixDQUFDLFNBQVMsQ0FBQzthQUM5QixHQUFHLENBQ0EsMkJBQWdCLENBQUMsV0FBVyxFQUM1QiwyQkFBZ0IsQ0FBQyxXQUFXLENBQUM7YUFDaEMsTUFBTSxDQUNILDJCQUFnQixDQUFDLFdBQVcsRUFDNUIsMkJBQWdCLENBQUMsV0FBVyxDQUFDO2FBQ2hDLEdBQUcsQ0FDQSwyQkFBZ0IsQ0FBQyxXQUFXLEVBQzVCLDJCQUFnQixDQUFDLFlBQVksQ0FDeEIsQ0FBQTtRQUVYLG9DQUFvQztRQUNuQyxTQUFTO1FBQ1Asa0NBQWtDO1FBQ2xDLGlDQUFpQztRQUM5QixPQUFPO1FBQ1gsT0FBTyxJQUFJLENBQUMsR0FBRyxDQUFBO0lBQ25CLENBQUM7Q0FDSjtBQXhDRCxrQ0F3Q0MifQ==

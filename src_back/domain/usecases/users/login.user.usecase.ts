@@ -1,5 +1,4 @@
 import { IUseCase } from "../usecase.interface";
-import { IUsersEntity } from "../../entities/users/users.entity.interface";
 import { IUsersRepository } from "../../repositories/users.repositories.interface";
 import UsersRepository  from "../../../adapters/repositories/users.repository";
 import jwt  from "jsonwebtoken";
