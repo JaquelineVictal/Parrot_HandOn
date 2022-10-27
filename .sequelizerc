@@ -1,0 +1,7 @@
+var path = require("path");
+
+module.exports = {
+    'config': path.resolve('Dist', 'config', 'database.config.js'),
+    'migrations-path': path.resolve('Dist', 'mysql', 'migrations'),
+    'seeders-path': path.resolve('dist', 'mysql', 'seeders'),
+};
