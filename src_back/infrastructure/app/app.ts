@@ -15,7 +15,7 @@ import cookieParser from "cookie-parser";
 
 const app: express.Application = express();
 const server: http.Server = http.createServer();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8000;
 const routes: CommonRoutesConfig[]  = [];
 const debugLog: debug.IDebugger = debug('app');
 

@@ -5,8 +5,8 @@ import { IUseCase } from "../usecase.interface";
 
 class  DeleteUserUseCase implements IUseCase{
     constructor(private _repository: IUsersRepository){}
-    async execute(data: { idpost: number}): Promise<void> {
-        return await this._repository.deletedById(data.idpost)        
+    async execute(data: { indexId: number}): Promise<void> {
+        return await this._repository.deletedById(data.indexId)        
     }
 }
 

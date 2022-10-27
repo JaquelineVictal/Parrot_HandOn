@@ -24,17 +24,17 @@ export class PostsRoutes extends CommonRoutesConfig{
         this.app.route(`/posts/:idpost`)
         .all(
             usersMiddlewares.compareSync,
-            postsControllers.listPosts)//valida se conta existe ou não
+            postsControllers.listPosts)
         .put(
             usersMiddlewares.compareSync,
-            postsControllers.updatePosts)//atualizar usuário
+            postsControllers.updatePosts)
         .delete(
             usersMiddlewares.compareSync,
-            postsControllers.removePosts)//deletar usuário
+            postsControllers.deletePosts)
         .get(
             usersMiddlewares.compareSync,
             postsControllers.getPostsById
-                )//pegar conta por id
+                )
 
         this.app.route(`/posts/:iduser`)
         .post(

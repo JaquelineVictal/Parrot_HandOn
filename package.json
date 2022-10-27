@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc && node --unhandled-rejections=strict ./dist/app.js",
-    "debug": "export DEBUG=* && npm run start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "dev": "tsc && node --unhandled-rejections=strict -r dotenv/config ./dist/infrastructure/app/app.js",
+    "debug": "set DEBUG=* && npm run dev",
+    "mocks": "tsc && node ./dist/infrastructure/persistence/mocks/mocks.js"
   },
   "repository": {
     "type": "git",

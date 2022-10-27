@@ -22,19 +22,19 @@ export class UserRoutes extends CommonRoutesConfig{
 
         this.app.route(`/users/:indexId`)
         .all(
-            usersMiddlewares.validateUserExists)//valida se conta existe ou não
+            usersMiddlewares.validateUserExists)
         .put(
             usersMiddlewares.compareSync,
             usersMiddlewares.validateUserExists,
-            usersControllers.updateUsers)//atualizar usuário
+            usersControllers.updateUsers)
         .delete(
             usersMiddlewares.compareSync,
             usersMiddlewares.validateUserExists,
-            usersControllers.removeUsers)//deletar usuário
+            usersControllers.deleteUsers)
         .get(
             usersMiddlewares.compareSync,
             usersControllers.getUsersById
-            );//pegar conta por id
+            );
             
         this.app.route(`/login`)
             .post(
