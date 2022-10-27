@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Card = styled.div`
   background-color: white;
   width: 300px;
-  height: 540px;
+  height: auto;
   display: flex;
   align-items: center;
   padding: 32px;
@@ -19,7 +19,6 @@ export const Card = styled.div`
 
   @media only screen and (min-width: 600px) {
     width: 450px;
-    height: 640px;
   }
 `
 

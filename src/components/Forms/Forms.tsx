@@ -1,7 +1,8 @@
+import { ReactNode } from "react";
 import { Card } from "./forms.style"
 
 type FormsProps = {
-  children: JSX.Element;
+  children: ReactNode;
 }
 
 export default function Forms(props: FormsProps){

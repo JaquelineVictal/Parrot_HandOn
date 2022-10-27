@@ -1,13 +1,8 @@
 import { Inputstyle } from "./Input.style"
 
-type InputProps = {
-  name:string;
-  placeholder:string;
-}
-
-export default function Input(props: InputProps) {
+export default function Input({...rest}) {
   return (
-    <Inputstyle>
+    <Inputstyle {...rest}>
     </Inputstyle>
   );
 }

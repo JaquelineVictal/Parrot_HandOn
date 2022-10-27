@@ -6,8 +6,9 @@ export default function Login() {
   return (
     <Deslogado>
       <Forms>
-        <p className="fs-3 pt-3 fw-semibold mb-5">LOGIN</p>
-        <Input name="nome" placeholder="nome"/>
+        <p className="fs-3 pt-3 fw-semibold mb-4">LOGIN</p>
+        <Input name="nome" placeholder="email"/>
+        <Input name="nome" placeholder="senha"/>
       </Forms>
     </Deslogado>
   );
