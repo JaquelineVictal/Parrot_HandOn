@@ -2,7 +2,7 @@ import express from 'express';
 import debug from 'debug'
 import constantsConfig from '../../../infrastructure/config/constants.config';
 import listPostUsecase from '../../../domain/usecases/posts/list.post.usecase';
-import readPostUsecase from '../../../domain/usecases/posts/read.post.usecase';
+import readPostUseCase from '../../../domain/usecases/posts/read.post.usecase';
 import createPostUsecase from '../../../domain/usecases/posts/create.post.usecase';
 import updatePostUsecase from '../../../domain/usecases/posts/update.post.usecase';
 import deletePostUsecase from '../../../domain/usecases/posts/delete.post.usecase';
@@ -23,8 +23,8 @@ class PostsController {
 
     async getPostsById(request: express.Request, response: express.Response){
         try {
-            const posts = await readPostUsecase.execute({
-                idpost: Number(request.params)
+            const posts = await readPostUseCase.execute({
+                idpost: Number(request.params.idpost)                
             });
 
                 debug.log(posts)
@@ -48,9 +48,10 @@ class PostsController {
     }
 
     async updatePosts(request: express.Request, response: express.Response){
-        const posts = await updatePostUsecase.execute(request.body);
+            
+        const posts = await updatePostUsecase.execute(Object.assign({idpost: Number(request.params.idpost)}, request.body));
         try {
-            response.status(200).send(request.body)
+            response.status(200).send(posts)
         } catch (error) {
             response.status(404).send({ messages: constantsConfig.MIDDLEWARE.MESSAGES.ERROR.ERRORUPDATED_YES})
         }
@@ -59,7 +60,7 @@ class PostsController {
     async deletePosts(request: express.Request, response: express.Response){
         try {
             await deletePostUsecase.execute({
-                idpost: Number(request.params)
+                idpost: Number(request.params.idpost)
             });
             response.status(204).send();
         } catch (error) {

@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const posts_repository_1 = __importDefault(require("../../../adapters/repositories/posts.repository"));
-class ListUserUseCase {
+class ListPostUseCase {
     constructor(_repository) {
         this._repository = _repository;
     }
@@ -23,5 +23,5 @@ class ListUserUseCase {
         });
     }
 }
-exports.default = new ListUserUseCase(posts_repository_1.default);
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGlzdC5wb3N0LnVzZWNhc2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9zcmNfYmFjay9kb21haW4vdXNlY2FzZXMvcG9zdHMvbGlzdC5wb3N0LnVzZWNhc2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7QUFBQSx1R0FBOEU7QUFLOUUsTUFBTSxlQUFlO0lBQ2pCLFlBQW9CLFdBQTZCO1FBQTdCLGdCQUFXLEdBQVgsV0FBVyxDQUFrQjtJQUFFLENBQUM7SUFDOUMsT0FBTzs7WUFDVCxPQUFPLE1BQU0sSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLEVBQUUsQ0FBQTtRQUN4QyxDQUFDO0tBQUE7Q0FDSjtBQUVELGtCQUFlLElBQUksZUFBZSxDQUM5QiwwQkFBZSxDQUNsQixDQUFBIn0=
+exports.default = new ListPostUseCase(posts_repository_1.default);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGlzdC5wb3N0LnVzZWNhc2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9zcmNfYmFjay9kb21haW4vdXNlY2FzZXMvcG9zdHMvbGlzdC5wb3N0LnVzZWNhc2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7QUFDQSx1R0FBOEU7QUFLOUUsTUFBTSxlQUFlO0lBQ2pCLFlBQW9CLFdBQTZCO1FBQTdCLGdCQUFXLEdBQVgsV0FBVyxDQUFrQjtJQUFFLENBQUM7SUFDOUMsT0FBTzs7WUFDVCxPQUFPLE1BQU0sSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLEVBQUUsQ0FBQTtRQUN4QyxDQUFDO0tBQUE7Q0FDSjtBQUVELGtCQUFlLElBQUksZUFBZSxDQUM5QiwwQkFBZSxDQUNsQixDQUFBIn0=

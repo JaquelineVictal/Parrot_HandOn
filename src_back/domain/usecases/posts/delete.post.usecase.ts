@@ -2,7 +2,7 @@ import PostsRepository from "../../../adapters/repositories/posts.repository";
 import { IPostsRepository } from "../../repositories/posts.repositories.interface";
 import { IUseCase } from "../usecase.interface";
 
-class DeleteUserUseCase implements IUseCase{
+class DeletePostUseCase implements IUseCase{
     constructor(private _repository: IPostsRepository){}
     async execute(data: { idpost: number}): Promise<void> {
         return await this._repository.deletedById(data.idpost)        
@@ -10,6 +10,6 @@ class DeleteUserUseCase implements IUseCase{
 }
 
 
-export default new DeleteUserUseCase(
+export default new DeletePostUseCase(
     PostsRepository
 )
