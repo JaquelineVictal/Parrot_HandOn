@@ -1,16 +1,16 @@
 import baseAPi from './config.ts/index';
 
-interface UsuarioPayload {
+interface UserPayload {
     nome: string;
     email: string;
-    apartamento: number;
-    publicacao : number;
+    apartment: number;
+    content : string;
 }
 
-export function Usuario(payload: UsuarioPayload) {
+export function User(payload: UserPayload) {
     return baseAPi.post("/users/:id", payload)
 }
 
-export function ListarPublicacao() {
+export function ListarUsers() {
     return baseAPi.get ("/users")
 }
