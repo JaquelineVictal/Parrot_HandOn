@@ -40,7 +40,7 @@ class PostsController {
         try {
             const post = createPostUsecase.execute(request.body);
             debug.log(post)
-        response.status(200).send(request.body);
+            response.status(200).send(request.params.idpost);
         } catch (error) {
             console.error(error)
             response.status(404).send({ messages: constantsConfig.MIDDLEWARE.MESSAGES.ERROR.ERRORCREATED_YES})
