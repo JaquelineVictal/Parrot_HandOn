@@ -4,7 +4,7 @@ import { FeedPage, UserPage } from "../components/Feed-User/FeedPage"
 import { ReactNode, useState } from "react";
 
 export function User() {
-  const [nome, setNome] = useState<string>("");
+  const [name, setNome] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [apartment, setApartament] = useState <number>();
   const [content, setContent] = useState<string>("");
@@ -13,7 +13,7 @@ export function User() {
     event.preventDefault();
 
     const payload = {
-      nome,
+      name,
       email,
       apartment,
       content

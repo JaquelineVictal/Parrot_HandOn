@@ -7,22 +7,16 @@ import { ApiFeed} from "../server/ApiFeed"
 
 
 export function Feed() {
-  const [nome, setNome] = useState<string>("");
+  const [name, setName] = useState<string>("");
   const [apartament, setApartament] = useState<string>("");
-  const [data, setData] = useState <number>();
+  const [date, setData] = useState <number>();
   const [hora, setHora] = useState<number>();
   const [post, setPost] = useState<string>;
 
-  const Profile = async (event: FormEvent) => {
-    event.preventDefault();
-
-    const payload = {
-    nome,   
-    apartament,
-    data,
-    hora,
-    post,
-    };
+  
+  const Feed = ApiFeed.moradores.map((moradores) => {
+    return<Feed name={`${moradores.name} apê - ${moradores.apartment}`} date={moradores.timestamp} postText={moradores.post}/>
+  })
     
 
   return (

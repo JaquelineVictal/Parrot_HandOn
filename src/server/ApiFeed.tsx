@@ -4,7 +4,7 @@ import baseAPi from './config.ts/index';
 interface ListarPublicacao {
     nome: string;    
     apartamento: number;
-    data: number;
+    date: number;
     hora: number;
     post : string;
 }

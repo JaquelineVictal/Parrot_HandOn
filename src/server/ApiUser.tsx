@@ -1,7 +1,7 @@
 import baseAPi from './config.ts/index';
 
 interface UserPayload {
-    nome: string;
+    name: string;
     email: string;
     apartment: number;
     content : string;
@@ -12,5 +12,5 @@ export function UserApi(payload: UserPayload) {
 }
 
 export function ListarUsers() {
-    return baseAPi.get ("/users")
+    return baseAPi.get ("/users")  
 }
