@@ -31,8 +31,7 @@ export function User() {
        }
 
     };
-  
-    
+      
   return (
     <Logado>
       <NavBar></NavBar>
