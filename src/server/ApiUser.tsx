@@ -8,7 +8,7 @@ interface UsuarioPayload {
 }
 
 export function Usuario(payload: UsuarioPayload) {
-    return baseAPi.post("/users/:indexId", payload)
+    return baseAPi.post("/users/:id", payload)
 }
 
 export function ListarPublicacao() {
