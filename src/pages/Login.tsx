@@ -15,6 +15,7 @@ export function Login() {
         <Button>entrar!</Button>
         <CustomLink to={"/cadastro"} color={"#555555"} fontSize={18}>cadastre-se</CustomLink>
         <CustomLink to={"/feed"} color={"#555555"} fontSize={18}>feed</CustomLink>
+        <CustomLink to={"/usuario"} color={"#555555"} fontSize={18}>user</CustomLink>
       </Forms>
     </Deslogado>
   );

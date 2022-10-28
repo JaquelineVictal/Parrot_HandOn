@@ -18,7 +18,7 @@ export function FeedPage(props: FeedProps) {
           <ButtonPubli>publicar</ButtonPubli>
           </div>
         </FeedUserBox>
-        <FeedBox>
+        <FeedBox> 
           <div className="Publi">
           <Profile src="/public/icon-perfil-5.svg"/>
           </div>
@@ -35,4 +35,35 @@ export function FeedPage(props: FeedProps) {
       </div>
     </div>
   )
+}
+
+export function UserPage() {
+  return (
+  <div className="container">
+      <div className="col-12 col-lg-6 col-xxl-6 offset-lg-3 offset-xxl-3">
+        <FeedUserBox>
+          <Profile src="/public/icon-perfil-1.svg"/>
+          <div className="ms-3 mt-5">
+            <p className="mb-1">Nome e sobrenome</p>
+            <p className="m-0">apê 82</p>
+            <p className="m-0">mail@gmail.com</p>
+          </div>
+        </FeedUserBox>
+        <FeedBox> 
+          <div className="Publi">
+          <Profile src="/public/icon-perfil-5.svg"/>
+          </div>
+          <div className="Publi">
+          <Profile src="/public/icon-perfil-2.svg"/>
+          </div>
+          <div className="Publi">
+          <Profile src="/public/icon-perfil-3.svg"/>
+          </div>
+          <div className="Publi">
+          <Profile src="/public/icon-perfil-4.svg"/>
+          </div>
+        </FeedBox>
+      </div>
+    </div>
+    );
 }
