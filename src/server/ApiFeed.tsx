@@ -1,5 +1,5 @@
 import baseAPi from './config.ts/index';
-import {Feed} from '../../src/pages/Feed';
+
 
 interface ListarPublicacao {
     nome: string;    
@@ -10,7 +10,7 @@ interface ListarPublicacao {
 }
 
 export function PublicarFeed () {
-    return baseAPi.get("/Feed/posts")
+    return baseAPi.get("/feed/posts")
 }
 
 export function ListarPublicacao() {

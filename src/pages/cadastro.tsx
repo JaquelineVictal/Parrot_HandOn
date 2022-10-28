@@ -9,7 +9,7 @@ export default function Register() {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");  
   const [apartment, setapartment] = useState<number>();
-  const [photo, setLink] = useState<string>("");
+  const [photo, setPhoto] = useState<string>("");
   
   async function (event: FormEvent) {
     event.preventDefault()
