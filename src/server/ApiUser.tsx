@@ -7,7 +7,7 @@ interface UserPayload {
     content : string;
 }
 
-export function User(payload: UserPayload) {
+export function UserApi(payload: UserPayload) {
     return baseAPi.post("/users/:id", payload)
 }
 

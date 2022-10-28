@@ -2,6 +2,7 @@ import  NavBar from "../components/NavBar/NavBar"
 import { Logado } from "../components/Body/Body"
 import { FeedPage, UserPage } from "../components/Feed-User/FeedPage"
 import { ReactNode, useState } from "react";
+import { UserApi, ListarUsers } from "../server/ApiUser"
 
 
 export function User() {
@@ -10,7 +11,7 @@ export function User() {
   const [apartment, setApartament] = useState <number>();
   const [content, setContent] = useState<string>("");
 
-  const User = async (event:Event ) => {
+  const Profile = async (event:Event ) => {
     event.preventDefault();
 
     const payload = {
@@ -18,8 +19,19 @@ export function User() {
       email,
       apartment,
       content
-    }
-  }
+    };
+    
+    try {
+      const response = await User();
+      // if(response.status !== 201) {
+      //   return alert ("Olá");      }
+      // alert ("")
+       } catch (error) {
+       alert ("Sem Publicação")
+       }
+
+    };
+  
     
   return (
     <Logado>
