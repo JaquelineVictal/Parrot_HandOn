@@ -7,12 +7,11 @@ import { CustomLink } from "../link.style";
 import {Login} from "../server/ApiLogin";
 
 export function Login() {
-
-  export default function Login(){
+ 
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  function userLogin(event: FormEvent) {
+  function Login(event: onChange) {
     event.preventDefault()
   }
 
