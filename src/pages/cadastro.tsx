@@ -7,9 +7,13 @@ export default function Login() {
   return (
     <Deslogado>
       <Forms>
-        <p className="fs-3 pt-3 fw-semibold mb-4">LOGIN</p>
-        <Input name="nome" placeholder="email"/>
-        <Input name="nome" placeholder="senha"/>
+        <p className="fs-3 pt-3 fw-semibold mb-4">CADASTRO</p>
+        <Input name="nome" placeholder="nome"/>
+        <Input name="email" placeholder="email"/>
+        <Input name="senha" placeholder="senha"/>
+        <Input name="confirmar senha" placeholder="confirmar senha"/>
+        <Input name="unidade/apartamento" placeholder="unidade/apartamento"/>
+        <Input name="link da foto" placeholder="link da foto"/>
         <Button>entrar!</Button>
       </Forms>
     </Deslogado>

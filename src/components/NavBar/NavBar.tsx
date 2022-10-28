@@ -1,5 +1,6 @@
 import { Logado } from "../Body/Body"
 import { NavStyle } from "./NavBar.style"
+import { CustomLink } from "../../link.style"
 
 export default function NavBar() {    
     return(        
@@ -9,8 +10,8 @@ export default function NavBar() {
         <div className="me-5">
           <strong className="strong me-1">
             Olá, usuário! | 
-            </strong>
-            <a className="sair" href="">Sair</a>
+          </strong>
+            <CustomLink to={"/"} color={"#6033AA"} fontSize={16}>sair</CustomLink>
           </div>
         </NavStyle>
       
