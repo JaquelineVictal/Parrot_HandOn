@@ -22,3 +22,13 @@ export const ButtonStyled = styled.button `
     width: 335px;
   }
 `
+
+export const ButtonPubli = styled.button`
+width: 164px;
+height: 28px;
+left: 887px;
+top: 210px;
+
+background: #6033AA;
+border-radius: 30px;
+`
