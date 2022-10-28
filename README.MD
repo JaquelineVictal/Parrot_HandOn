@@ -102,6 +102,17 @@ https://github.com/JaquelineVictal/Parrot_HandOn.git
 ```
 
 <br>
+<br>
+
+## Comandos para seu terminal
+
+* npm install
+* npx sequelize db:create
+* npx sequelize db:migrate
+* npm run dev
+
+
+<br>
 
 
 <a id="ancora9"></a>
