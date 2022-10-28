@@ -9,6 +9,14 @@ export function Login() {
     return baseAPi.post("/login")
 }
 
-export function Cadastro() {
+interface Register {
+    name: string;
+    email: string;
+    password: string;    
+    apartament: number;
+    photo: string;
+}
+
+export function Register() {
     return baseAPi.post ("/register")
 }

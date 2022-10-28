@@ -2,8 +2,6 @@ import  NavBar from "../components/NavBar/NavBar"
 import { Logado } from "../components/Body/Body"
 import { FeedPage, UserPage } from "../components/Feed-User/FeedPage"
 import { ReactNode, useState } from "react";
-import { UserApi, ListarUsers } from "../server/ApiUser"
-
 
 export function User() {
   const [nome, setNome] = useState<string>("");
