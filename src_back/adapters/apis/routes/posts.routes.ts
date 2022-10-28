@@ -23,8 +23,7 @@ export class PostsRoutes extends CommonRoutesConfig{
 
         this.app.route(`/posts/:idpost`)
         .all(
-            usersMiddlewares.compareSync,
-            postsControllers.listPosts)
+            usersMiddlewares.compareSync)
         .put(
             usersMiddlewares.compareSync,
             postsControllers.updatePosts)
@@ -34,7 +33,7 @@ export class PostsRoutes extends CommonRoutesConfig{
         .get(
             usersMiddlewares.compareSync,
             postsControllers.getPostsById
-                )
+            )
 
       //  this.app.route(`/posts/:iduser`)
        // .post(

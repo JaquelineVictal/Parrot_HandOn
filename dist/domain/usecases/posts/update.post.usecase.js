@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const posts_repository_1 = __importDefault(require("../../../adapters/repositories/posts.repository"));
-class ReadUserUseCase {
+class ReadPostUseCase {
     constructor(_repository) {
         this._repository = _repository;
     }
@@ -23,5 +23,5 @@ class ReadUserUseCase {
         });
     }
 }
-exports.default = new ReadUserUseCase(posts_repository_1.default);
+exports.default = new ReadPostUseCase(posts_repository_1.default);
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXBkYXRlLnBvc3QudXNlY2FzZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyY19iYWNrL2RvbWFpbi91c2VjYXNlcy9wb3N0cy91cGRhdGUucG9zdC51c2VjYXNlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7O0FBQ0EsdUdBQThFO0FBSzlFLE1BQU0sZUFBZTtJQUNqQixZQUFvQixXQUE2QjtRQUE3QixnQkFBVyxHQUFYLFdBQVcsQ0FBa0I7SUFBRSxDQUFDO0lBQzlDLE9BQU8sQ0FBQyxJQUFpQjs7WUFDM0IsT0FBTyxNQUFNLElBQUksQ0FBQyxXQUFXLENBQUMsVUFBVSxDQUFDLElBQUksQ0FBQyxDQUFBO1FBQ2xELENBQUM7S0FBQTtDQUNKO0FBRUQsa0JBQWUsSUFBSSxlQUFlLENBQzlCLDBCQUFlLENBQ2xCLENBQUEifQ==

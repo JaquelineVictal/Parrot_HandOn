@@ -44,7 +44,7 @@ class UsersController {
     }
 
     async updateUsers(request: express.Request, response: express.Response){
-        const user = await updateUserUsecase.execute(request.body);
+        const user = await updateUserUsecase.execute(Object.assign({indexId: Number(request.params.indexId)}, request.body));
         console.log("CONSOLE DO CONTROLLER")
         response.status(200).send(user)
     }
